@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "753840861229",
+    "project_id": "final-exam-wmp",
+    "storage_bucket": "final-exam-wmp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753840861229:android:03cf41409e765449fd48a4",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk6QGi2JaFoVnNY94EW_2wjgBcNkm602U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753840861229:android:92529206dc639459fd48a4",
+        "android_client_info": {
+          "package_name": "com.example.flutter_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk6QGi2JaFoVnNY94EW_2wjgBcNkm602U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
