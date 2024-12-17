@@ -35,7 +35,6 @@ class EnrollmentService {
 
   Future<bool> enrollSubject(String studentId, String subjectId) async {
     try {
-      // Check if already enrolled
       final alreadyEnrolled = await isAlreadyEnrolled(studentId, subjectId);
       if (alreadyEnrolled) {
         throw Exception('You are already enrolled in this subject');
