@@ -42,15 +42,12 @@ class _EnrollmentSummaryScreenState extends State<EnrollmentSummaryScreen> {
   Future<void> _dropSubject(
       BuildContext context, String enrollmentId, String subjectId, int subjectCredits) async {
     try {
-      // Delete enrollment
       await _firestore.collection('enrollments').doc(enrollmentId).delete();
-
-      // Decrease enrolled count in the subject
+     
       await _firestore.collection('subjects').doc(subjectId).update({
         'enrolled': FieldValue.increment(-1),
       });
 
-      // Update student credits locally and in Firestore
       await _firestore.collection('students').doc(studentId).update({
         'credits': FieldValue.increment(-subjectCredits),
       });
@@ -87,7 +84,6 @@ class _EnrollmentSummaryScreenState extends State<EnrollmentSummaryScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Total Credits Section
           Card(
             margin: const EdgeInsets.all(16),
             elevation: 4,
@@ -118,8 +114,6 @@ class _EnrollmentSummaryScreenState extends State<EnrollmentSummaryScreen> {
               ),
             ),
           ),
-
-          // Enrolled Subjects List
           Expanded(
             child: StreamBuilder<QuerySnapshot>(
               stream: _firestore
