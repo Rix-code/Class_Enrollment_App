@@ -51,8 +51,6 @@ class _SubjectListScreenState extends State<SubjectListScreen> {
             itemBuilder: (context, index) {
               final subject = subjects[index];
               final data = subject.data() as Map<String, dynamic>;
-
-              // Safely parse numeric fields
               final capacity = _parseToInt(data['capacity'], 0);
               final enrolled = _parseToInt(data['enrolled'], 0);
               final subjectCredits = _parseToInt(data['credits'], 0);
@@ -134,14 +132,11 @@ class _SubjectListScreenState extends State<SubjectListScreen> {
 
       final studentId = user.uid;
       final studentRef = _firestore.collection('students').doc(studentId);
-
-      // Ensure student document exists
       final studentDoc = await studentRef.get();
       if (!studentDoc.exists) {
-        // Create a new student document if it doesn't exist
         await studentRef.set({
-          'name': user.displayName ?? 'Unknown', // Default name
-          'credits': 0, // Initialize credits to 0
+          'name': user.displayName ?? 'Unknown', 
+          'credits': 0, 
         });
       }
 
