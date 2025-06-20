@@ -5,7 +5,4 @@ Wireless Mobile Programming Final Exam =>Android Application including the Datab
 
 I made an additional feature which can make the student to delete enrolled subject (this function is used if the user take the wrong subject)
 
-I made a documentation but sorry if laggy, my phone is old :D
-
-
 A folder called Documentation of Exam contains the database used in this program and its using firebase
